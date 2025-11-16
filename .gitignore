@@ -1,0 +1,10 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+/.idea
+/Lab2_cars/target
+/Lab1_LukeSkywalker/target
+/Lab1_LukeSkywalker/*.html
+/Lab1_LukeSkywalker/resource-files
+/Lab1_LukeSkywalker/.idea
+/Lab1_LukeSkywalker/index-files
