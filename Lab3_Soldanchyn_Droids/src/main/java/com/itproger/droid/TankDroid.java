@@ -1,11 +1,12 @@
 package com.itproger.droid;
-import com.itproger.weapon.Weapon;
 
 public class TankDroid extends Droid {
+    protected int critChance;
 
     public TankDroid(String name) {
         // HP: 150, DMG: 12, Acc: 90%, Crit: 5%
-        super(name, 150, 12, 90, 5);
+        super(name, 150, 12, 90);
+        critChance = 5;
     }
 
     @Override
@@ -21,7 +22,7 @@ public class TankDroid extends Droid {
 
     @Override
     public Droid copyForBattle() {
-        return new TankDroid(this.name, this.weapon);
+        return new TankDroid(this.name);
     }
 
 }

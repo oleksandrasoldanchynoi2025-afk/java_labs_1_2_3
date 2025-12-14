@@ -1,10 +1,12 @@
 package com.itproger.droid;
-import com.itproger.weapon.Weapon;
+
 
 public class Berserker extends Droid {
+    protected int critChance;
 
-    public Berserker(String name, Weapon weapon) {
-        super(name, 100, weapon); // Передаємо це батьківському класу Droid
+    public Berserker(String name) {
+        super(name, 100, 25, 50); // Передаємо це батьківському класу Droid
+        critChance = 10;
     }
     @Override
     public int attack(Droid enemy) {

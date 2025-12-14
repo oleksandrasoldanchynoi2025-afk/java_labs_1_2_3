@@ -1,6 +1,5 @@
 package com.itproger.gameservice;
 import com.itproger.droid.*;
-import com.itproger.weapon.*;
 import java.io.*;
 import java.util.*;
 
@@ -40,31 +39,14 @@ public class Game {
         System.out.print("Введіть ім'я: ");
         String name = scanner.nextLine();
 
-        // Вибір зброї
-        Weapon weapon = chooseWeapon();
-
         if (type.equals("1")) {
-            droids.add(new Berserker(name, weapon));
+            droids.add(new Berserker(name));
         } else {
-            droids.add(new TankDroid(name, weapon));
+            droids.add(new TankDroid(name));
         }
         System.out.println("✅ Дроїд успішно створений!");
     }
 
-    private Weapon chooseWeapon() {
-        System.out.println("Оберіть зброю:");
-        System.out.println("1. Бластер (Стандарт)");
-        System.out.println("2. Вогонь (Потужний, але косий)");
-        System.out.println("3. Електро-шок (Точний)");
-        System.out.println("4. Рука дроїда (Слабка, але дає ЩИТ)");
-
-        return switch (scanner.nextLine()) {
-            case "2" -> new Fire();
-            case "3" -> new Electric();
-            case "4" -> new DroidHand();
-            default -> new Blaster(); // За замовчуванням
-        };
-    }
 
     private void showDroids() {
         if (droids.isEmpty()) {
